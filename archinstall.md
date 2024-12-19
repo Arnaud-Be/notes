@@ -149,7 +149,7 @@ passwd <nom de l'utilisateur>
 #~ modif sudoer
 ```
 EDITOR=nano visudo
-   #~décommenter la ligne #%sudo	ALL=(ALL:ALL) ALL
+   #~décommenter la ligne #%wheel	ALL=(ALL:ALL) ALL
 ```
 
  
