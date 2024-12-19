@@ -82,7 +82,7 @@ vim /etc/locale.conf
 ls /usr/share/kbd/consolefonts/ | grep "ter-"
 vim /etc/vconsole.conf
 	KEYMAP=fr-latin1
-	#FONT=ter-132b
+	FONT=ter-124b
 ```
  #~definition du nom de la machine
  
