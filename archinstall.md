@@ -1,5 +1,6 @@
 ## Sur la Base :
 https://wiki.archlinux.org/title/Installation_guide
+
 https://www.youtube.com/watch?v=iF91ZxHmMVM
 
 ## définir clavier azerty
