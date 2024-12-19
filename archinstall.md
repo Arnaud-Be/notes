@@ -1,15 +1,22 @@
+## Sur la Base :
+https://wiki.archlinux.org/title/Installation_guide
+https://www.youtube.com/watch?v=iF91ZxHmMVM
+
 ## définir clavier azerty
 ```
 localectl list-keymaps
 loadkeys fr-latin1
 ```
 ## vérifier mode EFI
+
 `cat /sys/firmware/efi/fw_platform_size`
 
 ## vérifier internet
+
 `ping archlinux.org`
 
 ## Mise à jour de l'horloge système
+
 `timedatectl`
 
 ## Partitionnement des disques
@@ -77,9 +84,11 @@ vim /etc/vconsole.conf
 	#FONT=ter-132b
 ```
  #~definition du nom de la machine
+ 
 `echo <nom de la machine> > /etc/hostname`
 
  #~ definition du mot de passe root
+ 
 `passwd`
 
 ## boot loader
