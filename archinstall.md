@@ -143,7 +143,7 @@ systemctl enable --now systemd-timesyncd
 ```
 ## création de l'utilisateur et de son mot de passe (ajout au groupe sudo)
 ```
-useradd -m -G sudo -s /bin/bash <nom de l'utilisateur>
+useradd -m -G wheel -s /bin/bash <nom de l'utilisateur>
 passwd <nom de l'utilisateur>
 ```
 #~ modif sudoer
