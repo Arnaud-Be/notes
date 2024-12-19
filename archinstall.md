@@ -123,7 +123,7 @@ vim loader.conf
 
 cd entries
 blkid
-blkid | grep sda3 | awk -F '"' '{print $2}' > arch.conf
+blkid | grep sda3 | awk -F ' ' '{print $2}' | awk -F '"' '{print $1$2}' > arch.conf
 vim arch.conf
 	title   Arch Linux
 	linux   /vmlinuz-linux
