@@ -3,16 +3,18 @@ https://wiki.archlinux.org/title/Installation_guide
 
 https://www.youtube.com/watch?v=iF91ZxHmMVM
 
-## définir clavier azerty
+## Définir clavier azerty
+
 ```
 localectl list-keymaps
 loadkeys fr-latin1
 ```
-## vérifier mode EFI
+
+## Vérifier mode EFI
 
 `cat /sys/firmware/efi/fw_platform_size`
 
-## vérifier internet
+## Vérifier internet
 
 `ping archlinux.org`
 
@@ -21,6 +23,7 @@ loadkeys fr-latin1
 `timedatectl`
 
 ## Partitionnement des disques
+
 ```
 fdisk -l
 fdisk /dev/sda
@@ -39,7 +42,9 @@ mount /dev/sda3 /mnt
 mount --mkdir /dev/sda1 /mnt/boot
 swapon /dev/sda2
 ```
+
 ## Installation des paquets essentiels
+
 ```
 pacman-key --init
 pacman-key --populate
@@ -48,29 +53,37 @@ pacman -Sy archlinux-keyring
 
 pacstrap -c -K /mnt base vim nano
 ```
+
 ## Configuration du système
-  #~fstab
+
+  #~ fstab
+
 ```
-  genfstab -U /mnt  
-  genfstab -U /mnt >> /mnt/etc/fstab
-  cat !$
+genfstab -U /mnt  
+genfstab -U /mnt >> /mnt/etc/fstab
+cat !$
   
    
-  arch-chroot /mnt
-  ping archlinux.org
+arch-chroot /mnt
+ping archlinux.org
   
-  vim /etc/pacman.conf
+vim /etc/pacman.conf
 	décommente <color>
 	décommente <ParallelDownload = 4>
 
 pacman -S linux linux-firmware networkmanager terminus-font sudo
+
 ```
- #~config de l'heure
+
+  #~ config de l'heure
+
 ```
 ln -sf /usr/share/zoneinfo/Europe/Paris /etc/localtime
 hwclock --systohc
 ```
- #~config de la locale et du clavier
+
+  #~ config de la locale et du clavier
+
 ```
 vim /etc/locale.gen
 	decommenté <fr_FR.UTF-8 UTF-8>
@@ -84,15 +97,17 @@ vim /etc/vconsole.conf
 	KEYMAP=fr-latin1
 	FONT=ter-124b
 ```
- #~definition du nom de la machine
+
+  #~ definition du nom de la machine
  
 `echo <nom de la machine> > /etc/hostname`
 
- #~ definition du mot de passe root
+  #~ definition du mot de passe root
  
 `passwd`
 
-## boot loader
+## Boot loader
+
 ```
 pacman -S intel-ucode
 bootctl install
@@ -127,7 +142,9 @@ vim arch-fallback.conf
 
 bootctl list
 ```
-## redémarrage du système (pas oublier de retirer le CD du  lecteur)
+
+## Redémarrage du système *ne pas oublier de retirer le CD du  lecteur*
+
 ```
 exit
 umount -R /mnt
@@ -135,18 +152,25 @@ swapoff /dev/sda2
 
 reboot
 ```
+
 --------------------------
-## initialisation des services au démarrage 
+
+## Initialisation des services au démarrage 
+
 ```
 systemctl enable --now NetworkManager
 systemctl enable --now systemd-timesyncd
 ```
-## création de l'utilisateur et de son mot de passe (ajout au groupe sudo)
+
+## Création de l'utilisateur et de son mot de passe (ajout au groupe sudo)
+
 ```
 useradd -m -G wheel -s /bin/bash <nom de l'utilisateur>
 passwd <nom de l'utilisateur>
 ```
-#~ modif sudoer
+
+  #~ modif sudoer
+
 ```
 EDITOR=nano visudo
    #~décommenter la ligne #%wheel	ALL=(ALL:ALL) ALL
@@ -154,15 +178,16 @@ EDITOR=nano visudo
 
 ---------------------------
 
-## installation KDE
-
-`pacman -S plasma-desktop sddm kde-system-meta konsole`
-`systemctl enable sddm`
-`localectl --no-convert set-x11-keymap fr pc104 ,oss`
-
-## installation Cinnamon
-
-`pacman -S cinnamon gnome-terminal xorg lightdm lightdm-gtk-greeter`
-`systemctl enable lightdm`
-`localectl --no-convert set-x11-keymap fr pc104 ,oss`
+## Installation KDE
+```
+pacman -S plasma-desktop sddm kde-system-meta konsole
+systemctl enable sddm
+localectl --no-convert set-x11-keymap fr pc104 ,oss
+```
+## Installation Cinnamon
+```
+pacman -S cinnamon gnome-terminal xorg lightdm lightdm-gtk-greeter
+systemctl enable lightdm
+localectl --no-convert set-x11-keymap fr pc104 ,oss
+```
 
