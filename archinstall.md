@@ -59,7 +59,7 @@ pacstrap -c -K /mnt base vim nano
   arch-chroot /mnt
   ping archlinux.org
   
-  vim pacman.conf
+  vim /etc/pacman.conf
 	décommente <color>
 	décommente <ParallelDownload = 4>
 
