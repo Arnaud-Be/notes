@@ -152,14 +152,17 @@ EDITOR=nano visudo
    #~décommenter la ligne #%wheel	ALL=(ALL:ALL) ALL
 ```
 
- 
+---------------------------
 
+## installation KDE
 
+`pacman -S plasma-desktop sddm kde-system-meta konsole`
+`systemctl enable sddm`
+`localectl --no-convert set-x11-keymap fr pc104 ,oss`
 
+## installation Cinnamon
 
-
-
-
-
-
+`pacman -S cinnamon gnome-terminal xorg lightdm lightdm-gtk-greeter`
+`systemctl enable lightdm`
+`localectl --no-convert set-x11-keymap fr pc104 ,oss`
 
