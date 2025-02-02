@@ -1,3 +1,13 @@
+### 0 - Sources
+[Atelier : LAMP + GLPI](https://github.com/O-clock-Volva/S05-atelier-LAMP/blob/master/README.md)
+[glpi](https://github.com/glpi-project/glpi/releases/)
+[Installation pas-à-pas de GLPI 10 sur Debian 12](https://github.com/glpi-project/glpi/releases/)
+[Apache configuration](https://glpi-install.readthedocs.io/fr/latest/prerequisites.html#apache-configuration)
+[Timezones mysql](https://glpi-install.readthedocs.io/fr/latest/timezones.html)
+[PHP : ajouter les directives “HttpOnly” et “Secure” aux cookies de session](https://glpi-install.readthedocs.io/fr/latest/timezones.html)
+[php](PHP : ajouter les directives “HttpOnly” et “Secure” aux cookies de session)
+
+
 ### 1 - Debian
     ISO : Debian 12.8.0 Net Install (disponible sur le drive)
     désactivez l'installation automatique (il faut cocher la case Skip unattended installation)
@@ -30,7 +40,8 @@ vim /etc/network/interfaces
 systemctl restart networking.service
 ip a
 ```
-<Se connecter en ssh>
+> [!NOTE]
+> Se connecter en ssh
 --------------
 > [!NOTE]
 > si installé sur vBox
