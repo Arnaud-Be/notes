@@ -30,7 +30,7 @@ vim /etc/network/interfaces
 systemctl restart networking.service
 ip a
 ```
-**Se connecter en ssh**
+>>> Se connecter en ssh
 --------------
 > [!NOTE]
 > si installé sur vBox
@@ -72,7 +72,7 @@ mysql -u root -p
    exit
 ```
 
-### 3 - PHP
+### 3 - PHP
 
 ```
 sudo apt install php libapache2-mod-php
@@ -81,7 +81,7 @@ sudo systemctl restart apache2
 echo "<?php phpinfo(); ?>" | sudo tee -a /var/www/html/info.php
 ```
 
-### 4 - GLPI
+### 4 - GLPI
 
 ```
 cd ~
