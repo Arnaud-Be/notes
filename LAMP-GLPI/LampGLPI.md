@@ -5,7 +5,7 @@
 [Apache configuration](https://glpi-install.readthedocs.io/fr/latest/prerequisites.html#apache-configuration)
 [Timezones mysql](https://glpi-install.readthedocs.io/fr/latest/timezones.html)
 [PHP : ajouter les directives “HttpOnly” et “Secure” aux cookies de session](https://glpi-install.readthedocs.io/fr/latest/timezones.html)
-[php](PHP : ajouter les directives “HttpOnly” et “Secure” aux cookies de session)
+[php](https://www.php.net/manual/fr/session.configuration.php)
 
 
 ### 1 - Debian
