@@ -6,6 +6,10 @@
     laissez la case Enable EFI décochée
     10 Gio de disque dur
 
+#### Configuration VMware
+![](./images/img01.png)
+![](./images/img02.png)
+![](./images/img03.png)
 ```
 cat > /etc/apt/apt.conf.d/90_recommends << EOF
 APT::Install-Recommends "false";
@@ -28,14 +32,15 @@ ip a
 ```
 **Se connecter en ssh**
 --------------
-### si installé sur vBox
-```
-sudo apt update
-sudo apt install build-essential dkms linux-headers-$(uname -r)
-sudo mount /dev/cdrom /mnt
-cd /mnt
-sudo ./VBoxLinuxAdditions.run
-```
+> [!NOTE]
+> si installé sur vBox
+>```
+>sudo apt update
+>sudo apt install build-essential dkms linux-headers-$(uname -r)
+>sudo mount /dev/cdrom /mnt
+>cd /mnt
+>sudo ./VBoxLinuxAdditions.run
+>```
 --------------
 ### 2 - Apache / MariaDB
 - Apache
@@ -66,7 +71,9 @@ mysql -u root -p
    FLUSH PRIVILEGES;
    exit
 ```
+
 ### 3 - PHP
+
 ```
 sudo apt install php libapache2-mod-php
 sudo apt install php-{curl,gd,intl,memcache,xml,zip,mbstring,json,mysql,bz2,ldap}
@@ -75,6 +82,7 @@ echo "<?php phpinfo(); ?>" | sudo tee -a /var/www/html/info.php
 ```
 
 ### 4 - GLPI
+
 ```
 cd ~
 wget https://github.com/glpi-project/glpi/releases/download/10.0.17/glpi-10.0.17.tgz
@@ -86,6 +94,7 @@ sudo chmod 770 -R /var/www/html
 ```
 
 ### 5 - PHPMyAdmin
+
 ```
 sudo apt install phpmyadmin
 ```
