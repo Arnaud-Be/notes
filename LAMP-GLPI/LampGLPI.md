@@ -30,7 +30,7 @@ vim /etc/network/interfaces
 systemctl restart networking.service
 ip a
 ```
->>> Se connecter en ssh
+<Se connecter en ssh>
 --------------
 > [!NOTE]
 > si installé sur vBox
