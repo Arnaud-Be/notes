@@ -1,10 +1,16 @@
 ### 0 - Sources
 [Atelier : LAMP + GLPI](https://github.com/O-clock-Volva/S05-atelier-LAMP/blob/master/README.md)
+
 [glpi](https://github.com/glpi-project/glpi/releases/)
+
 [Installation pas-à-pas de GLPI 10 sur Debian 12](https://github.com/glpi-project/glpi/releases/)
+
 [Apache configuration](https://glpi-install.readthedocs.io/fr/latest/prerequisites.html#apache-configuration)
+
 [Timezones mysql](https://glpi-install.readthedocs.io/fr/latest/timezones.html)
+
 [PHP : ajouter les directives “HttpOnly” et “Secure” aux cookies de session](https://glpi-install.readthedocs.io/fr/latest/timezones.html)
+
 [php](https://www.php.net/manual/fr/session.configuration.php)
 
 
