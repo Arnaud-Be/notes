@@ -1,4 +1,4 @@
->>> Monsieur Roger, un photographe particulièrement stressé, t’a envoyé un email urgent :
+> Monsieur Roger, un photographe particulièrement stressé, t’a envoyé un email urgent :
 
     Bonjour,
 
@@ -17,7 +17,6 @@ Ta mission est de calmer la situation et de diagnostiquer puis résoudre les pro
     Récupérer les images perdues avec Recuva,
     Ajouter l’historique de fichier pour le dossier « Images »,
     Créer un point de restauration.
->>>
 
 #### Étape 1 : Incident : Résoudre le problème de connexion (mot de passe)
 
@@ -32,14 +31,14 @@ Boot sur Hiren's BootCD
 
 ![**Hiren's BootCD**](./images/01-2.png)
 ![**Hiren's BootCD**](./images/01-3.png)
-> [!Note pour M Roger]
+> [!NOTE pour M Roger]
 > Pour définir le mot de passe :
 > Appuyer sur **CTRL + ALT + SUPPR**, puis cliquer sur **Modifier le mot de passe**
 
 ![**Hiren's BootCD**](./images/01-4.png)
 
 
-> [!Notes de dépannage]
+> [!WARNING]
 > On s'occupe tout de suite de l'étape 3 avec les outils de Hiren's BootCD
 
 #### Étape 2 : Incident : Réparer le périphérique réseau
@@ -55,8 +54,8 @@ Boot sur Hiren's BootCD
 - Vérification du bon fonctionnement en faisant un ping de google.fr depuis une console CMD
 ![**Réseau**](./images/02-3.png)
 
-
-> [!Autres possibilités]
+> [!TIP]
+> Autres possibilitées :
 > - **Executer > ncpa.cpl** pour ouvrir les Connexions réseau, et activer la carte 
 ![**Réseau**](./images/02-4.png)
 ![**Réseau**](./images/02-5.png)
@@ -77,7 +76,7 @@ Enable-NetAdaptater -Name "Ethernet"
 ![**Recuva**](./images/03-3.png)
 
 ------
-> [!Notes de dépannage]
+> [!WARNING]
 > Pour les étapes 4 et 5 il serait bien d'installer un nouveau disque,
 > ou de mettre en place une solution avec un disque dure extèrne ou un NAS.
 
@@ -102,7 +101,7 @@ Enable-NetAdaptater -Name "Ethernet"
 
 ![**Historique de fichiers**](./images/04-6.png)
 
-> [!Note pour M Roger]
+> [!NOTE pour M Roger]
 > L'**Historique de fichiers** va permettre de sauvegarder régulièrement les dossiers sélectionnés.
 > Pour les restaurer : Ouvrir l'**Explorateur de fichiers**
 
