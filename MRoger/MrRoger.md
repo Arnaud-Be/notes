@@ -43,9 +43,14 @@ Boot sur Hiren's BootCD
 > [!WARNING]
 > On s'occupe tout de suite de l'étape 3 avec les outils de Hiren's BootCD
 
+#### Étape 3 : Incident : Récupérer les images perdues avec Recuva
+
+- Utilisation de Recuva pour récupérer des fichiers :
+![**Recuva**](./images/03-1.png)
+![**Recuva**](./images/03-2.png)
+![**Recuva**](./images/03-3.png)
+
 #### Étape 2 : Incident : Réparer le périphérique réseau
-
-
 
 - Vérification de l'état de la carte réseau 
 ![**Réseau**](./images/02-1.png)
@@ -69,15 +74,6 @@ Boot sur Hiren's BootCD
 > ![**Réseau**](./images/02-7.png)
 > ![**Réseau**](./images/02-8.png)
 
-
-#### Étape 3 : Incident : Récupérer les images perdues avec Recuva
-
-- Utilisation de Recuva pour récupérer des fichiers :
-![**Recuva**](./images/03-1.png)
-![**Recuva**](./images/03-2.png)
-![**Recuva**](./images/03-3.png)
-
-------
 > [!WARNING]
 > Pour les étapes 4 et 5 il serait bien d'installer un nouveau disque,
 > ou de mettre en place une solution avec un disque dure extèrne ou un NAS.
@@ -90,16 +86,16 @@ Boot sur Hiren's BootCD
 ![**HDD**](./images/04-3.png)
 
 - Activation de l’historique de fichiers :
-> aller dans	**Paramètres > Système > Stockage >> Afficher les options de sauvegarde**
-> ou dans 	**Paramètres > Mise à jour et sécurité > Sauvegarde de fichiers**
+	- aller dans	**Paramètres > Système > Stockage >> Afficher les options de sauvegarde**
+	- ou dans 	**Paramètres > Mise à jour et sécurité > Sauvegarde de fichiers**
 
 ![**Historique de fichiers**](./images/04-4.png)
 
-> Ajouter un lecteur
+	- Ajouter un lecteur
 
 ![**Historique de fichiers**](./images/04-5.png)
 
-> Selectionner les dossiers à sauvegarder et activer la sauvegarde
+	- Selectionner les dossiers à sauvegarder et activer la sauvegarde
 
 ![**Historique de fichiers**](./images/04-6.png)
 
@@ -130,7 +126,7 @@ Boot sur Hiren's BootCD
 #### Étape 5 : Demande : Créer un point de restauration
 
 - Création d’un point de restauration système :
-> Dans **Paramètres** > **Système** > **À propos de** sélectionner **Paramètres avancés du système** > onglet **Protection du système** > **Créer...**
+	- Dans **Paramètres** > **Système** > **À propos de** sélectionner **Paramètres avancés du système** > onglet **Protection du système** > **Créer...**
 
 ![**Restauration de fichiers**](./images/05-01.png)
 
