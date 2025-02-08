@@ -32,8 +32,10 @@ Boot sur Hiren's BootCD
 ![**Hiren's BootCD**](./images/01-2.png)
 ![**Hiren's BootCD**](./images/01-3.png)
 > [!NOTE]
-> **Pour M Roger**
+> _**Pour M Roger**_ : 
+> 
 > Pour définir le mot de passe :
+> 
 > Appuyer sur **CTRL + ALT + SUPPR**, puis cliquer sur **Modifier le mot de passe**
 
 ![**Hiren's BootCD**](./images/01-4.png)
