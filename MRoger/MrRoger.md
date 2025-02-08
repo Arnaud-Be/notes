@@ -31,7 +31,7 @@ Boot sur Hiren's BootCD
 
 ![**Hiren's BootCD**](./images/01-2.png)
 ![**Hiren's BootCD**](./images/01-3.png)
-> [!NOTEX]
+> [!NOTE]
 > **Pour M Roger**
 > Pour définir le mot de passe :
 > Appuyer sur **CTRL + ALT + SUPPR**, puis cliquer sur **Modifier le mot de passe**
@@ -61,12 +61,12 @@ Boot sur Hiren's BootCD
 ![**Réseau**](./images/02-4.png)
 ![**Réseau**](./images/02-5.png)
 > - En console PowerShell Administrateur : 
-```
-Get-NetAdaptater
-Enable-NetAdaptater -Name "Ethernet"
-```
-![**Réseau**](./images/02-7.png)
-![**Réseau**](./images/02-8.png)
+> ```
+> Get-NetAdaptater
+> Enable-NetAdaptater -Name "Ethernet"
+> ```
+> ![**Réseau**](./images/02-7.png)
+> ![**Réseau**](./images/02-8.png)
 
 
 #### Étape 3 : Incident : Récupérer les images perdues avec Recuva
@@ -103,7 +103,7 @@ Enable-NetAdaptater -Name "Ethernet"
 ![**Historique de fichiers**](./images/04-6.png)
 
 > [!NOTE]
-> **pour M Roger**
+> **Pour M Roger**
 > L'**Historique de fichiers** va permettre de sauvegarder régulièrement les dossiers sélectionnés.
 > Pour les restaurer : Ouvrir l'**Explorateur de fichiers**
 
