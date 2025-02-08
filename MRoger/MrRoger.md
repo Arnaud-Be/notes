@@ -32,10 +32,9 @@ Boot sur Hiren's BootCD
 ![**Hiren's BootCD**](./images/01-2.png)
 ![**Hiren's BootCD**](./images/01-3.png)
 > [!NOTE]
-> _**Pour M Roger**_ : 
+> **Pour M Roger**
 > 
 > Pour définir le mot de passe :
-> 
 > Appuyer sur **CTRL + ALT + SUPPR**, puis cliquer sur **Modifier le mot de passe**
 
 ![**Hiren's BootCD**](./images/01-4.png)
@@ -106,26 +105,27 @@ Boot sur Hiren's BootCD
 
 > [!NOTE]
 > **Pour M Roger**
+> 
 > L'**Historique de fichiers** va permettre de sauvegarder régulièrement les dossiers sélectionnés.
 > Pour les restaurer : Ouvrir l'**Explorateur de fichiers**
-
-![**Restauration de fichiers**](./images/04-nr01.png)
-
+> 
+> ![**Restauration de fichiers**](./images/04-nr01.png)
+> 
 > Selectionner **Ce PC**
-
-![**Restauration de fichiers**](./images/04-nr02.png)
-
+> 
+> ![**Restauration de fichiers**](./images/04-nr02.png)
+> 
 > Cliquer sur le petit *Chevron* à coté de **Ce PC** et sélectionner **Panneau de configuration**
-
-![**Restauration de fichiers**](./images/04-nr03.png)
-
+> 
+> ![**Restauration de fichiers**](./images/04-nr03.png)
+> 
 > Dans **Système et sécurité** cliquer sur **Enregistrer des copies de sauvegarde de vos fichiers...**
-
-![**Restauration de fichiers**](./images/04-nr04.png)
-
+> 
+> ![**Restauration de fichiers**](./images/04-nr04.png)
+> 
 > Selectionner **Restaurer des fichiers personnels**
-
-![**Restauration de fichiers**](./images/04-nr05.png)
+> 
+> ![**Restauration de fichiers**](./images/04-nr05.png)
 
 #### Étape 5 : Demande : Créer un point de restauration
 
@@ -134,5 +134,7 @@ Boot sur Hiren's BootCD
 
 ![**Restauration de fichiers**](./images/05-01.png)
 
+
 #### Cloture de la réparation du PC de M Roger 
+
 
