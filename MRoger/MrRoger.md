@@ -89,20 +89,21 @@ Boot sur Hiren's BootCD
 	- aller dans	**Paramètres > Système > Stockage >> Afficher les options de sauvegarde**
 	- ou dans 	**Paramètres > Mise à jour et sécurité > Sauvegarde de fichiers**
 
-![**Historique de fichiers**](./images/04-4.png)
+	![**Historique de fichiers**](./images/04-4.png)
 
 	- Ajouter un lecteur
 
-![**Historique de fichiers**](./images/04-5.png)
+	![**Historique de fichiers**](./images/04-5.png)
 
 	- Selectionner les dossiers à sauvegarder et activer la sauvegarde
 
-![**Historique de fichiers**](./images/04-6.png)
+	![**Historique de fichiers**](./images/04-6.png)
 
 > [!NOTE]
 > **Pour M Roger**
 > 
 > L'**Historique de fichiers** va permettre de sauvegarder régulièrement les dossiers sélectionnés.
+> 
 > Pour les restaurer : Ouvrir l'**Explorateur de fichiers**
 > 
 > ![**Restauration de fichiers**](./images/04-nr01.png)
@@ -130,7 +131,8 @@ Boot sur Hiren's BootCD
 
 ![**Restauration de fichiers**](./images/05-01.png)
 
+------
 
 #### Cloture de la réparation du PC de M Roger 
-
+>>>
 
