@@ -31,7 +31,8 @@ Boot sur Hiren's BootCD
 
 ![**Hiren's BootCD**](./images/01-2.png)
 ![**Hiren's BootCD**](./images/01-3.png)
-> [!NOTE pour M Roger]
+> [!NOTEX]
+> **Pour M Roger**
 > Pour définir le mot de passe :
 > Appuyer sur **CTRL + ALT + SUPPR**, puis cliquer sur **Modifier le mot de passe**
 
@@ -101,7 +102,8 @@ Enable-NetAdaptater -Name "Ethernet"
 
 ![**Historique de fichiers**](./images/04-6.png)
 
-> [!NOTE pour M Roger]
+> [!NOTE]
+> **pour M Roger**
 > L'**Historique de fichiers** va permettre de sauvegarder régulièrement les dossiers sélectionnés.
 > Pour les restaurer : Ouvrir l'**Explorateur de fichiers**
 
