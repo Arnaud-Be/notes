@@ -85,7 +85,7 @@ sudo mysql_secure_installation
 
 mysql -u root -p
 
-   CREATE USER 'dbuser'@'localhost' IDENTIFIED BY 'rocknroll';
+   CREATE USER 'dbuser'@'localhost' IDENTIFIED BY 'VotreMotDePasse';
    GRANT ALL PRIVILEGES ON *.* TO 'dbuser'@'localhost' WITH GRANT OPTION;
    FLUSH PRIVILEGES;
    exit
