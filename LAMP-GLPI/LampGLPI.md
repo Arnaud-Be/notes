@@ -16,10 +16,8 @@
 
 ### 1 - Debian
     ISO : Debian 12.8.0 Net Install (disponible sur le drive)
-    désactivez l'installation automatique (il faut cocher la case Skip unattended installation)
     2048 MB de RAM
     1 CPU
-    laissez la case Enable EFI décochée
     10 Gio de disque dur
 
 #### Configuration VMware
@@ -52,7 +50,12 @@ ip a
 > Se connecter en ssh
 --------------
 > [!NOTE]
-> si installé sur vBox
+> si installé sur vBox :
+> 
+> désactivez l'installation automatique (il faut cocher la case Skip unattended installation)
+> 
+> laissez la case Enable EFI décochée
+> 
 >```
 >sudo apt update
 >sudo apt install build-essential dkms linux-headers-$(uname -r)
