@@ -34,7 +34,9 @@ apt update
 apt install sudo vim
 usermod -aG sudo <nom_utilisateur>
 ```
-**/!\ Remplacez <nom_utilisateur> par le nom de votre utilisateur !**
+> [!WARNING]
+> **Remplacez <nom_utilisateur> par le nom de votre utilisateur !**
+
 ```
 vim /etc/network/interfaces
    allow-hotplug ens32
