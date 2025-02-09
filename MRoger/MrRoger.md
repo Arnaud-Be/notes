@@ -62,8 +62,8 @@ Boot sur Hiren's BootCD
 ![**Réseau**](./images/02-3.png)
 
 > [!TIP]
-> Autres possibilitées :
-> - **Executer > ncpa.cpl** pour ouvrir les Connexions réseau, et activer la carte 
+> Autres possibilités :
+> - **Exécuter > ncpa.cpl** pour ouvrir les Connexions réseau, et activer la carte 
 ![**Réseau**](./images/02-4.png)
 ![**Réseau**](./images/02-5.png)
 > - En console PowerShell Administrateur : 
@@ -76,7 +76,7 @@ Boot sur Hiren's BootCD
 
 > [!WARNING]
 > Pour les étapes 4 et 5 il serait bien d'installer un nouveau disque,
-> ou de mettre en place une solution avec un disque dure extèrne ou un NAS.
+> ou de mettre en place une solution avec un disque dure externe ou un NAS.
 
 #### Étape 4 : Demande : Ajouter l’historique de fichiers pour le dossier « Images »
 
@@ -95,7 +95,7 @@ Boot sur Hiren's BootCD
 
 	![**Historique de fichiers**](./images/04-5.png)
 
-	- Selectionner les dossiers à sauvegarder et activer la sauvegarde
+	- Sélectionner les dossiers à sauvegarder et activer la sauvegarde
 
 	![**Historique de fichiers**](./images/04-6.png)
 
@@ -108,7 +108,7 @@ Boot sur Hiren's BootCD
 > 
 > ![**Restauration de fichiers**](./images/04-nr01.png)
 > 
-> Selectionner **Ce PC**
+> Sélectionner **Ce PC**
 > 
 > ![**Restauration de fichiers**](./images/04-nr02.png)
 > 
@@ -120,7 +120,7 @@ Boot sur Hiren's BootCD
 > 
 > ![**Restauration de fichiers**](./images/04-nr04.png)
 > 
-> Selectionner **Restaurer des fichiers personnels**
+> Sélectionner **Restaurer des fichiers personnels**
 > 
 > ![**Restauration de fichiers**](./images/04-nr05.png)
 
@@ -133,6 +133,6 @@ Boot sur Hiren's BootCD
 
 ------
 
-#### Cloture de la réparation du PC de M Roger 
+#### Clôture de la réparation du PC de M Roger 
 >>>
 
