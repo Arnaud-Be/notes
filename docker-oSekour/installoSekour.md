@@ -2,7 +2,7 @@
 ## Dans des vm ou des containers LXC, GNU/debian ou Ubuntu
 
 
-### Sur la machine accueillant le Manager et où sera créé les conteneurs Docker faire les commandes
+### Sur la machine accueillant le Manager et où sera créé les conteneurs Docker faire les commandes
 
 
 ```
