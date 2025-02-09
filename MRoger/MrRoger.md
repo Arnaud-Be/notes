@@ -132,7 +132,6 @@ Boot sur Hiren's BootCD
 ![**Restauration de fichiers**](./images/05-01.png)
 
 ------
+#### Clôture de la réparation du PC de M Roger 
 
-#### Clôture de la réparation du PC de M Roger 
->>>
 
