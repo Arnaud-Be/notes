@@ -202,9 +202,42 @@ sudo systemctl restart apache2
 mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -p -u root mysql
 ```
 
+### 7 - Mise en place https
 
+- Création d'un certificat autosigné
+```
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt
+```
+- Modification apache pour le site glpi
+```
+sudo vim /etc/apache2/sites-available/000-glpi.conf
+<VirtualHost *:443>
+   SSLEngine on
+   SSLCertificateFile /etc/ssl/certs/apache-selfsigned.crt
+   SSLCertificateKeyFile /etc/ssl/private/apache-selfsigned.key
 
+   ServerName glpi.192.99.46.119
+   DocumentRoot /var/www/html/glpi/public
 
+   <Directory /var/www/html/glpi/public>
+    Require all granted
+ 
+    RewriteEngine On
+
+    RewriteCond %{HTTP:Authorization} ^(.+)$
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)$ index.php [QSA,L]
+   </Directory>
+</VirtualHost>
+
+sudo systemctl restart apache2
+```
+- correction de l'erreur : **La directive PHP "session.cookie_secure" devrait être définie à "on" quand GLPI est accessible via le protocole HTTPS.**
+```
+COOKIES=$(sudo grep -r "session.cookie_secure" /etc); for i in "$COOKIES"; do sudo sed -i 's/.*session.cookie_secure.*/session.cookie_secure = on/' $(echo "$COOKIES" | awk -F ":" '{print $1}');done
+```
 
 
 
