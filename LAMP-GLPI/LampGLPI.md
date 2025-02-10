@@ -165,7 +165,7 @@ sudo vim /etc/glpi/config/local_define.php
 ```
 sudo vim /etc/apache2/sites-available/000-glpi.conf
    <VirtualHost *:80>
-      ServerName glpi.192.168.0.51
+      ### ServerName glpi.localhost
       DocumentRoot /var/www/html/glpi/public
 
       <Directory /var/www/html/glpi/public>
