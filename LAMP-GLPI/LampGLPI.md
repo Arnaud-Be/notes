@@ -192,7 +192,7 @@ sudo a2enmod rewrite
 ```
 - cookie_httponly
 ```
-COOKIES=$(sudo grep -r "session.cookie_httponly" /etc); for i in "$COOKIES"; do sudo sed -i 's/.*session.cookie_httponly.*/session.cookie_httponly = "1"/; s/.*session.cookie_secure.*/session.cookie_secure = "1"/' $(echo "$COOKIES" | awk -F ":" '{print $1}');done
+COOKIES=$(sudo grep -r "session.cookie_httponly" /etc); for i in "$COOKIES"; do sudo sed -i 's/.*session.cookie_httponly.*/session.cookie_httponly = on/' $(echo "$COOKIES" | awk -F ":" '{print $1}');done
 
 sudo systemctl restart apache2
 ```
