@@ -108,7 +108,7 @@ sudo systemctl restart apache2
 echo "<?php phpinfo(); ?>" | sudo tee -a /var/www/html/info.php
 ```
 > [!WARNING]
-> penser à supprimer ou déplacer le fichier pour ne pas le faire apparaitre en production
+> penser à supprimer ou déplacer le fichier pour ne pas le faire apparaître en production
 
 ### 4 - GLPI
 
@@ -211,7 +211,7 @@ mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -p -u root mysql
 
 ### 7 - Mise en place https
 
-- Création d'un certificat autosigné
+- Création d'un certificat auto-signé
 ```
 sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt
 ```
