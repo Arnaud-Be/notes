@@ -20,10 +20,9 @@
     1 CPU
     10 Gio de disque dur
 
-#### Configuration VMware
-![](./images/img01.png)
-![](./images/img02.png)
-![](./images/img03.png)
+- Installation en mode serveur (`environnement de bureau Debian` et `Gnome` sont décochés, `serveur SSH` est coché)
+
+- Installation et configuration de sudo 
 ```
 cat > /etc/apt/apt.conf.d/90_recommends << EOF
 APT::Install-Recommends "false";
@@ -35,6 +34,7 @@ usermod -aG sudo <nom_utilisateur>
 > [!WARNING]
 > **Remplacez <nom_utilisateur> par le nom de votre utilisateur !**
 
+- Configuration de l'interface en mode static
 ```
 vim /etc/network/interfaces
    allow-hotplug ens32
@@ -92,7 +92,12 @@ mysql -u root -p
    GRANT ALL PRIVILEGES ON *.* TO 'dbuser'@'localhost' WITH GRANT OPTION;
    FLUSH PRIVILEGES;
    exit
+   
+systemctl status mariadb
 ```
+
+> [!WARNING]
+> penser à bien modifier `VotreMotDePasse` et en utiliser un solide pour une mise en production
 
 ### 3 - PHP
 
@@ -102,6 +107,8 @@ sudo apt install php-{curl,gd,intl,memcache,xml,zip,mbstring,json,mysql,bz2,ldap
 sudo systemctl restart apache2
 echo "<?php phpinfo(); ?>" | sudo tee -a /var/www/html/info.php
 ```
+> [!WARNING]
+> penser à supprimer ou déplacer le fichier pour ne pas le faire apparaitre en production
 
 ### 4 - GLPI
 
