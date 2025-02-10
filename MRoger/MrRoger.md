@@ -21,7 +21,7 @@ Ta mission est de calmer la situation et de diagnostiquer puis résoudre les pro
 #### Étape 1 : Incident : Résoudre le problème de connexion (mot de passe)
 
 Boot sur Hiren's BootCD
-![**Hiren's BootCD**](./images/00.png)
+![**Hiren's BootCD**](https://www.hirensbootcd.org/)
 
 - Utilisation de **Windows Login Unlocker**
 
