@@ -259,7 +259,7 @@ sudo systemctl restart apache2
 		- Destination port range : 4443 (Port entrant, d’arrivée par internet – WAN)
 		- Inscrire ce port deux fois car nous ne souhaitons pas rediriger une plage de ports mais uniquement ce port)
 		- Redirect target IP : 10.111.0.10 (IP de GLPI sur LAN2)
-		- Redirect target Port : 80
+		- Redirect target Port : HTTPS
 	![NAT pfsense](./images/img05.png)
 
 
