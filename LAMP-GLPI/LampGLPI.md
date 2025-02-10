@@ -235,9 +235,32 @@ sudo vim /etc/apache2/sites-available/000-glpi.conf
 sudo systemctl restart apache2
 ```
 - correction de l'erreur : **La directive PHP "session.cookie_secure" devrait être définie à "on" quand GLPI est accessible via le protocole HTTPS.**
+![session.cookie_secure](./images/img04.png)
 ```
 COOKIES=$(sudo grep -r "session.cookie_secure" /etc); for i in "$COOKIES"; do sudo sed -i 's/.*session.cookie_secure.*/session.cookie_secure = on/' $(echo "$COOKIES" | awk -F ":" '{print $1}');done
+
+sudo systemctl restart apache2
 ```
+
+- Mise en ligne de GLPI 
+
+	- Règles NAT pour proxmox
+	
+	```
+	iptables -t nat -A PREROUTING -i vmbr0 -p tcp --dport 4443 -j DNAT --to-destination 192.168.42.254:4443
+	iptables -L -t nat
+	Chain PREROUTING (policy ACCEPT)
+	target     prot opt source               destination         
+	DNAT       tcp  --  anywhere             anywhere             tcp dpt:4443 to:192.168.42.254:4443
+	```
+	
+	- Règles NAT pour pfsense
+	
+		- Destination port range : 4443 (Port entrant, d’arrivée par internet – WAN)
+		- Inscrire ce port deux fois car nous ne souhaitons pas rediriger une plage de ports mais uniquement ce port)
+		- Redirect target IP : 10.111.0.10 (IP de GLPI sur LAN2)
+		- Redirect target Port : 80
+	![NAT pfsense](./images/img05.png)
 
 
 
