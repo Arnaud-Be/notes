@@ -155,7 +155,7 @@ sudo vim /var/www/html/glpi/inc/downstream.php
        require_once GLPI_CONFIG_DIR . '/local_define.php';
    }
 
-sudo vim /etc/glpi/local_define.php
+sudo vim /etc/glpi/config/local_define.php
    <?php
    define('GLPI_VAR_DIR', '/var/lib/glpi/files');
    define('GLPI_LOG_DIR', '/var/log/glpi');
