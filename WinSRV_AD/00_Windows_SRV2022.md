@@ -47,7 +47,7 @@
 
 > [!NOTE]
 > `Avec Experience de bureau` si on veut un serveur avec une interface Windows
-> Sinon sans ce sera un serveur dit `Nano` à gérer à distance soit en SSH soit avec WAC ((Windows Admin Center)[https://www.microsoft.com/en-ca/windows-server/windows-admin-center])
+> Sinon sans ce sera un serveur dit `Nano` à gérer à distance soit en SSH soit avec WAC ([Windows Admin Center](https://www.microsoft.com/en-ca/windows-server/windows-admin-center))
 
 ![vmproxmox](./images/02-3.png)
 
