@@ -56,7 +56,10 @@
 > [!NOTE]
 > Ajouter les piotes VirtIO pour les disques (**vioscsi**) et la carte réseau (**NetKVM**)
 
-<img src="./images/02-4.png" width=50%> <img src="./images/02-5.png" width=50%>
+![vmproxmox](./images/02-4.png) ![vmproxmox](./images/02-5.png)
+
+
+
 
 
 
