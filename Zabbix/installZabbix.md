@@ -98,10 +98,10 @@ mysql -u root -p
 ```
 > [!WARNING]
 > Les commandes suivantes sont à entrer dans un terminal sous `MariaDB [(none)]>`
-> et changer `<password>` par votre mot de passe
+> et changer `MotDePasseUtilisateurZabbix` par votre mot de passe
 ```
 create database zabbix character set utf8mb4 collate utf8mb4_bin;
-create user zabbix@localhost identified by <password>;
+create user zabbix@localhost identified by 'MotDePasseUtilisateurZabbix';
 grant all privileges on zabbix.* to zabbix@localhost;
 set global log_bin_trust_function_creators = 1;
 quit;
@@ -137,6 +137,33 @@ sudo dpkg-reconfigure locales
 ```
 sudo zcat /usr/share/zabbix/sql-scripts/mysql/server.sql.gz | sudo mysql --default-character-set=utf8mb4 -uzabbix -p zabbix
 ```
+
+- Désactivation de `log_bin_trust_function_creators`
+
+```
+mysql -u root -p
+```
+> [!WARNING]
+> Les commandes suivantes sont à entrer dans un terminal sous `MariaDB [(none)]>`
+```
+set global log_bin_trust_function_creators = 0;
+quit;
+```
+
+- Configuration du mot de passe pour la base de données zabbix
+```
+sudo vim /etc/zabbix/zabbix_server.conf 
+```
+Modifier la ligne `# DBPassword= ` par `DBPassword=MotDePasseUtilisateurZabbix`
+
+- Redémarrage de Zabbix et Apache
+
+```
+sudo systemctl restart zabbix-server zabbix-agent apache2
+sudo systemctl enable zabbix-server zabbix-agent apache2
+```
+
+
 
 première connextion Zabbix
 [ Admin / zabbix ]
