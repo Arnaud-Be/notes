@@ -12,6 +12,12 @@
 
 <img src="./images/04.png" width=50%>
 
+- Choix du réseau / DNS : 
+
+	- bien choisir vmbr2 pour le bridge (réseau pfsense) 
+	- Static : definir IP/cidr et passerelle (10.0.0.1 pour la pfsense) en DNS on met l'adresse de la pfsense
+	- en DHCP on laisse tout par defaut, on ne met rien dans le DNS
+	
 <img src="./images/05.png" width=50%>
 
 <img src="./images/06.png" width=50%>
@@ -49,7 +55,7 @@ systemctl restart sshd
 ```
 wget https://repo.zabbix.com/zabbix/7.2/release/debian/pool/main/z/zabbix-release/zabbix-release_latest_7.2+debian12_all.deb
 dpkg -i zabbix-release_latest_7.2+debian12_all.deb
-apt update 
+apt update
 
 apt install zabbix-server-mysql zabbix-frontend-php zabbix-apache-conf zabbix-sql-scripts zabbix-agent
 ```
@@ -79,14 +85,21 @@ mysql_secure_installation
 
 ```
 mysql -u root -p
+```
+> [!WARNING]
+> Les commandes suivantes sont à entrer dans un terminal sous `MariaDB [(none)]>`
+```
+create database zabbix character set utf8mb4 collate utf8mb4_bin;
+create user zabbix@localhost identified by 'password';
+grant all privileges on zabbix.* to zabbix@localhost;
+set global log_bin_trust_function_creators = 1;
+quit;
+```
 
-mysql> create database zabbix character set utf8mb4 collate utf8mb4_bin;
-mysql> create user zabbix@localhost identified by 'password';
-mysql> grant all privileges on zabbix.* to zabbix@localhost;
-mysql> set global log_bin_trust_function_creators = 1;
-mysql> quit; 
+- on verifie le status de Mariadb
 
-systemctl status mariadb.service 
+```
+systemctl status mariadb.service
 ```
 
 - Installation adminer
