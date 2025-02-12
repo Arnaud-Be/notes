@@ -47,7 +47,7 @@ apt update && apt upgrade
 > systemctl restart sshd
 > ```
 
-#### Création d'un utilisateur 
+#### Création d'un utilisateur et ajout au groupe sudo
 
 ```
 apt install sudo vim
@@ -64,10 +64,10 @@ useradd -d /home/NomUtilisateur -G sudo -s /bin/bash NomUtilisateur
 
 ```
 wget https://repo.zabbix.com/zabbix/7.2/release/debian/pool/main/z/zabbix-release/zabbix-release_latest_7.2+debian12_all.deb
-dpkg -i zabbix-release_latest_7.2+debian12_all.deb
-apt update
+sudo dpkg -i zabbix-release_latest_7.2+debian12_all.deb
+sudo apt update
 
-apt install zabbix-server-mysql zabbix-frontend-php zabbix-apache-conf zabbix-sql-scripts zabbix-agent
+sudo apt install zabbix-server-mysql zabbix-frontend-php zabbix-apache-conf zabbix-sql-scripts zabbix-agent
 ```
 > [!WARNING]
 > Installer la base de donnée
@@ -75,9 +75,9 @@ apt install zabbix-server-mysql zabbix-frontend-php zabbix-apache-conf zabbix-sq
 - Installation de Mariadb
 
 ```
-apt install mariadb-server
+sudo apt install mariadb-server
 
-mysql_secure_installation
+sudo mysql_secure_installation
 
    Enter current password for root (enter for none): 
    Switch to unix_socket authentication [Y/n] Y
@@ -116,15 +116,15 @@ systemctl status mariadb.service
 - Installation adminer
 
 ```
-apt install adminer
-a2enconf adminer
-systemctl reload apache2
+sudo apt install adminer
+sudo a2enconf adminer
+sudo systemctl reload apache2
 ```
 
 - Configuration des locales
 
 ```
-dpkg-reconfigure locales
+sudo dpkg-reconfigure locales
 ```
 > [!NOTE]
 > Sélectionner les `fr_FR` et `en_US`
@@ -135,7 +135,7 @@ dpkg-reconfigure locales
 - Importation de la bd zabbix
 
 ```
-zcat /usr/share/zabbix/sql-scripts/mysql/server.sql.gz | mysql --default-character-set=utf8mb4 -uzabbix -p zabbix
+sudo zcat /usr/share/zabbix/sql-scripts/mysql/server.sql.gz | sudo mysql --default-character-set=utf8mb4 -uzabbix -p zabbix
 ```
 
 première connextion Zabbix
