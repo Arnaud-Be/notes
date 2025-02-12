@@ -116,7 +116,7 @@ quit;
 systemctl status mariadb.service
 ```
 
-#### 5 Installation adminer
+#### 5 Installation adminer
 
 ```
 sudo apt install adminer
