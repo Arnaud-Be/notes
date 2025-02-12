@@ -95,9 +95,17 @@ mysql -u root -p
    
 systemctl status mariadb
 ```
-
 > [!WARNING]
 > penser à bien modifier `VotreMotDePasse` et en utiliser un solide pour une mise en production
+
+> [!TIP]
+> **Commandes mysql** 
+> - Liste des Tables : `show databases;`
+> - Liste des Utilisateurs : `SELECT User,Host FROM mysql.user;`
+> - Liste des droit d'un utilisateur : `SHOW GRANTS FOR 'foo'@'bar';`
+> - Révocation des droits : `REVOKE ALL PRIVILEGES, GRANT OPTION FROM 'foo'@'bar';`
+> - Supprimer une table : `DROP DATABASE MaBeseDeDonnée;`
+> - Supprimer un utilisateur : `DROP USER 'foo'@'bar';`
 
 ### 3 - PHP
 

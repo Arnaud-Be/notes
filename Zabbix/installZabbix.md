@@ -14,8 +14,8 @@
 
 - Choix du réseau / DNS : 
 
-	- bien choisir vmbr2 pour le bridge (réseau pfsense) 
-	- Static : definir IP/cidr et passerelle (10.0.0.1 pour la pfsense) en DNS on met l'adresse de la pfsense
+	- Choix de vmbr3 pour le bridge (réseau LAN2 de la pfsense) 
+	- Static : definir IP/cidr et passerelle (10.111.0.1 pour la pfsense) en DNS on met l'adresse de la pfsense
 	- en DHCP on laisse tout par defaut, on ne met rien dans le DNS
 	
 <img src="./images/05.png" width=50%>
@@ -31,20 +31,30 @@
 ```
 apt update && apt upgrade
 ```
+> [!WARNING]
+> L'utilisation du SSH avec le compte root est déconseillé
+>
+> #### Instalation de vim et activation de SSH pour root
+> ```
+> apt install vim
+> vim /etc/ssh/sshd.config
+> ```
+> 
+> > [!NOTE]
+> > Remplacer `#PermitRootLogin prohibit-password` par `PermitRootLogin yes`
+> 
+> ```
+> systemctl restart sshd
+> ```
 
-- Instalation de vim et activation de SSH pour root
+#### Création d'un utilisateur 
 
 ```
-apt install vim
-vim /etc/ssh/sshd.config
+apt install sudo vim
+mkdir /home/NomUtilisateur
+useradd -d /home/NomUtilisateur -G sudo -s /bin/bash NomUtilisateur
 ```
 
-> [!NOTE]
-> Remplacer `#PermitRootLogin prohibit-password` par `PermitRootLogin yes`
-
-```
-systemctl restart sshd
-```
 #### Installation de Zabbix 
 
 - [Zabbix](https://www.zabbix.com/fr/download)
@@ -88,9 +98,10 @@ mysql -u root -p
 ```
 > [!WARNING]
 > Les commandes suivantes sont à entrer dans un terminal sous `MariaDB [(none)]>`
+> et changer `<password>` par votre mot de passe
 ```
 create database zabbix character set utf8mb4 collate utf8mb4_bin;
-create user zabbix@localhost identified by 'password';
+create user zabbix@localhost identified by <password>;
 grant all privileges on zabbix.* to zabbix@localhost;
 set global log_bin_trust_function_creators = 1;
 quit;
@@ -118,11 +129,15 @@ dpkg-reconfigure locales
 > [!NOTE]
 > Sélectionner les `fr_FR` et `en_US`
 
+<img src="./images/10.png" width=50%>
+<img src="./images/11.png" width=50%>
+
 - Importation de la bd zabbix
 
 ```
 zcat /usr/share/zabbix/sql-scripts/mysql/server.sql.gz | mysql --default-character-set=utf8mb4 -uzabbix -p zabbix
 ```
 
-
+première connextion Zabbix
+[ Admin / zabbix ]
 
