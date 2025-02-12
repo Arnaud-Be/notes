@@ -1,6 +1,6 @@
-### installation de zabbix sur CT debian12
+### Installation de zabbix sur CT debian12
 
-#### création du conteneur Debian
+#### Création du conteneur Debian
  
 <img src="./images/00.png" width=50%>
 
@@ -26,7 +26,7 @@
 apt update && apt upgrade
 ```
 
-- instalation de vim et activation de SSH pour root
+- Instalation de vim et activation de SSH pour root
 
 ```
 apt install vim
@@ -43,7 +43,7 @@ systemctl restart sshd
 
 - [Zabbix](https://www.zabbix.com/fr/download)
 > [!NOTE]
-> sur le site de Zabbix, selectionner la Version, la Distribution, l'OS, les composants Zabbix, le base de données et le serveur web.
+> Sur le site de Zabbix, selectionner la Version, la Distribution, l'OS, les composants Zabbix, le base de données et le serveur web.
 
 
 ```
@@ -56,7 +56,7 @@ apt install zabbix-server-mysql zabbix-frontend-php zabbix-apache-conf zabbix-sq
 > [!WARNING]
 > Installer la base de donnée
 
-- installation de Mariadb
+- Installation de Mariadb
 
 ```
 apt install mariadb-server
@@ -89,7 +89,7 @@ mysql> quit;
 systemctl status mariadb.service 
 ```
 
-- installation adminer
+- Installation adminer
 
 ```
 apt install adminer
@@ -97,7 +97,7 @@ a2enconf adminer
 systemctl reload apache2
 ```
 
-- configuration des locales
+- Configuration des locales
 
 ```
 dpkg-reconfigure locales
