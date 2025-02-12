@@ -47,13 +47,16 @@ apt update && apt upgrade
 > systemctl restart sshd
 > ```
 
-#### Création d'un utilisateur et ajout au groupe sudo
+#### Création d'un utilisateur et ajout au groupe sudo pour se connecter en SSH
 
 ```
 apt install sudo vim
 mkdir /home/NomUtilisateur
 useradd -d /home/NomUtilisateur -G sudo -s /bin/bash NomUtilisateur
 ```
+
+> [!TIP]
+> À partir d'ici il est plus simple de passer en SSH pour pouvoir copier/coller les commandes
 
 #### Installation de Zabbix 
 
