@@ -1,0 +1,115 @@
+### installation de zabbix sur CT debian12
+
+#### création du conteneur Debian
+ 
+<img src="./images/00.png" width=50%>
+
+<img src="./images/01.png" width=50%>
+
+<img src="./images/02.png" width=50%>
+
+<img src="./images/03.png" width=50%>
+
+<img src="./images/04.png" width=50%>
+
+<img src="./images/05.png" width=50%>
+
+<img src="./images/06.png" width=50%>
+
+<img src="./images/07.png" width=50%>
+
+<img src="./images/08.png" width=50%>
+
+- Mise à jour du conteneur
+
+```
+apt update && apt upgrade
+```
+
+- instalation de vim et activation de SSH pour root
+
+```
+apt install vim
+vim /etc/ssh/sshd.config
+```
+
+> [!NOTE]
+> Remplacer `#PermitRootLogin prohibit-password` par `PermitRootLogin yes`
+
+```
+systemctl restart sshd
+```
+#### Installation de Zabbix 
+
+- [Zabbix](https://www.zabbix.com/fr/download)
+> [!NOTE]
+> sur le site de Zabbix, selectionner la Version, la Distribution, l'OS, les composants Zabbix, le base de données et le serveur web.
+
+
+```
+wget https://repo.zabbix.com/zabbix/7.2/release/debian/pool/main/z/zabbix-release/zabbix-release_latest_7.2+debian12_all.deb
+dpkg -i zabbix-release_latest_7.2+debian12_all.deb
+apt update 
+
+apt install zabbix-server-mysql zabbix-frontend-php zabbix-apache-conf zabbix-sql-scripts zabbix-agent
+```
+> [!WARNING]
+> Installer la base de donnée
+
+- installation de Mariadb
+
+```
+apt install mariadb-server
+
+mysql_secure_installation
+
+   Enter current password for root (enter for none): 
+   Switch to unix_socket authentication [Y/n] Y
+   Change the root password? [Y/n] Y
+   New password:
+   Re-enter new password:
+   Password updated successfully!
+   Remove anonymous users? [Y/n] Y
+   Disallow root login remotely? [Y/n] Y
+   Remove test database and access to it? [Y/n] Y
+   Reload privilege tables now? [Y/n] Y
+```
+
+- Création de la base de données et de l'utilisateur
+
+```
+mysql -u root -p
+
+mysql> create database zabbix character set utf8mb4 collate utf8mb4_bin;
+mysql> create user zabbix@localhost identified by 'password';
+mysql> grant all privileges on zabbix.* to zabbix@localhost;
+mysql> set global log_bin_trust_function_creators = 1;
+mysql> quit; 
+
+systemctl status mariadb.service 
+```
+
+- installation adminer
+
+```
+apt install adminer
+a2enconf adminer
+systemctl reload apache2
+```
+
+- configuration des locales
+
+```
+dpkg-reconfigure locales
+```
+> [!NOTE]
+> Sélectionner les `fr_FR` et `en_US`
+
+- Importation de la bd zabbix
+
+```
+zcat /usr/share/zabbix/sql-scripts/mysql/server.sql.gz | mysql --default-character-set=utf8mb4 -uzabbix -p zabbix
+```
+
+
+
