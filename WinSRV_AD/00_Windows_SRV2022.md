@@ -33,21 +33,23 @@
 ![vmproxmox](./images/03-1.png)
 
 2. Paramètrage de la carte réseau : Utilisation d'une adresse static (indispensable pour certains rôles de l'AD)
-	1. Adresse : 10.111.0.15
-	2. Masque : 255.255.0.0
-	3. Passerelle : 10.111.0.1 (pfsense)
-	4. DNS : 10.111.0.1 (pfsense)
+	* Adresse : 10.111.0.15
+	* Masque : 255.255.0.0
+	* Passerelle : 10.111.0.1 (pfsense)
+	* DNS : 10.111.0.1 (pfsense)
+	
 ![vmproxmox](./images/03-2.png)
 
 > [!NOTE]
-> Lancer le **Gestionnaire de serveur** qui permettra de configurer et gérer le serveur ainsi que les les autres serveurs rattacher à cette forêt. 
+> Lancer le **Gestionnaire de serveur** qui permettra de configurer et gérer le serveur ainsi que les les autres serveurs rattacher à cette forêt.
+> 
 > ![vmproxmox](./images/03-3.png)
 
 3. Changement du nom de l'ordinateur 
 
-> ![vmproxmox](./images/03-4.png)
+![vmproxmox](./images/03-4.png)
 
-**On peut redémarrer le PC.**
+On peut redémarrer le serveur, il est pret pour commencer à installer nos **Rôles**.
 ---------
 
 
