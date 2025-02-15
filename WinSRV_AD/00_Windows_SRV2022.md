@@ -1,15 +1,11 @@
 ### Installation de Windows Serveur 2022 
 
-#### vm proxmox
-
 > [!NOTE]
-> #### La Machine Virtuelle :
+> #### La Machine Virtuelle Proxmox :
 > 1. Iso Windows Serveur + Iso virtio-win pour les drivers
 > 2. 2 Disque de 200 Go SCSI / Write back
 > 3. 2 Supports de Processeur / 4 Cœurs de type host
 > 4. 8192 Mib de RAM
-
-#### Installation de Windows Serveur
 
 - Démarrage bien penser à activer la console Proxmox pour "Appuyer sur une touche"
 
@@ -31,8 +27,28 @@
 
 ![vmproxmox](./images/02-4.png) ![vmproxmox](./images/02-5.png)
 
+#### Premier démarrage :
 
+1. Insatallation des Drivers Virtuo :
+![vmproxmox](./images/03-1.png)
 
+2. Paramètrage de la carte réseau : Utilisation d'une adresse static (indispensable pour certains rôles de l'AD)
+	1. Adresse : 10.111.0.15
+	2. Masque : 255.255.0.0
+	3. Passerelle : 10.111.0.1 (pfsense)
+	4. DNS : 10.111.0.1 (pfsense)
+![vmproxmox](./images/03-2.png)
+
+> [!NOTE]
+> Lancer le **Gestionnaire de serveur** qui permettra de configurer et gérer le serveur ainsi que les les autres serveurs rattacher à cette forêt. 
+> ![vmproxmox](./images/03-3.png)
+
+3. Changement du nom de l'ordinateur 
+
+> ![vmproxmox](./images/03-4.png)
+
+**On peut redémarrer le PC.**
+---------
 
 
 
