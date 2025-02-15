@@ -50,6 +50,7 @@
 ![vmproxmox](./images/03-4.png)
 
 On peut redémarrer le serveur, il est prêt pour commencer à installer nos **Rôles**.
+
 ---------
 
 
