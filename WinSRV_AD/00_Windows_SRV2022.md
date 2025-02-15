@@ -2,40 +2,12 @@
 
 #### vm proxmox
 
-<img src="./images/01-1.png" width=50%>
-
-- Système d'exploitation :
-
 > [!NOTE]
-> Bien pense à cocher `Ajouter un périphérique` pour y insérer l'ISO des drivers VirtIO  
-
-<img src="./images/01-2.png" width=50%>
-
-- Système
-
-<img src="./images/01-3.png" width=50%>
-
-- Disques
-
-> [!NOTE]
-> En prévision des rôle j'ai ajouté un disque
-
-<img src="./images/01-4.png" width=50%>
-
-- Processeur
-
-<img src="./images/01-5.png" width=50%>
-
-- Mémoire
-
-<img src="./images/01-6.png" width=50%>
-
-- Réseau
-
-> [!NOTE]
-> Pour mon projet j'ai mis le serveur sur le LAN2 (carte vmbr3) 
-
-<img src="./images/01-7.png" width=50%>
+> #### La Machine Virtuelle :
+> 1. Iso Windows Serveur + Iso virtio-win pour les drivers
+> 2. 2 Disque de 200 Go SCSI / Write back
+> 3. 2 Supports de Processeur / 4 Cœurs de type host
+> 4. 8192 Mib de RAM
 
 #### Installation de Windows Serveur
 
