@@ -29,10 +29,10 @@
 
 #### Premier démarrage :
 
-1. Insatallation des Drivers Virtuo :
+1. Installation des Drivers Virtuo :
 ![vmproxmox](./images/03-1.png)
 
-2. Paramètrage de la carte réseau : Utilisation d'une adresse static (indispensable pour certains rôles de l'AD)
+2. Paramétrage de la carte réseau : Utilisation d'une adresse static (indispensable pour certains rôles de l'AD)
 	* Adresse : 10.111.0.15
 	* Masque : 255.255.0.0
 	* Passerelle : 10.111.0.1 (pfsense)
@@ -49,7 +49,7 @@
 
 ![vmproxmox](./images/03-4.png)
 
-On peut redémarrer le serveur, il est pret pour commencer à installer nos **Rôles**.
+On peut redémarrer le serveur, il est prêt pour commencer à installer nos **Rôles**.
 ---------
 
 
