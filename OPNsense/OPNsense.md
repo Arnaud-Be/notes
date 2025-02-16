@@ -5,7 +5,7 @@
 - [OPNsense - Starter guide](https://opnsense.org/users/get-started/)
 - [OPNsense - Manuel](https://docs.opnsense.org/manual/hardware.html)
 
-#### Création de la vm proxmox
+#### Création de la vm proxmox
 
 1. Création d'une nouveau Bridge réseau vmbr4 qui sera utiliser pour connecter la machine OPNsense au réseau LAN
 
@@ -31,10 +31,10 @@
 
 Pour la première connexion et l'installation
 
-	* Login : **installer**
-	* mot de passe : **opnsense**
+	* Login : installer
+	* mot de passe : opnsense
 
-> ![WARNING]
+> [!WARNING]
 > le clavier est en QWERTY pour le moment
 
 ![OPNs-INstallation](./images/install-00-2.png)
@@ -89,21 +89,17 @@ On récupère les adresses MAC pour assigner les cartes sur le LAN et le WAN
 2. Configuration des interfaces
 
 ![OPNs-INstallation](./images/install-02-1.png)
-
 	* WAN
 		- Static
 		- 192.168.42.111/24
 		- passerelle : 192.168.42.1 (vmbr1)
-		
 		![OPNs-INstallation](./images/install-02-2.png)
-	
 	* LAN
 		- static
 		- 10.0.0.1/16
 		- pas de passerelle
 		- activation du DHCP
 		- plage de DHCP : 10.0.0.100 - 10.0.0.150
-		
 		![OPNs-INstallation](./images/install-02-3.png)
 		![OPNs-INstallation](./images/install-02-4.png)
 
