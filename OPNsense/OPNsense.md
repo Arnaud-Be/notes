@@ -9,7 +9,7 @@
 
 1. Création d'une nouveau Bridge réseau vmbr4 qui sera utiliser pour connecter la machine OPNsense au réseau LAN
 
-![OPNs-creaVM](./images/vmbr-01-1.png)
+<img src="./images/vmbr-01-1.png" width=50%>
 
 2. Création de la vm
 	
@@ -17,17 +17,17 @@
 	* 2 Go de RAM
 	* Bridge sur vmbr1
 
-![OPNs-creaVM](./images/vmbr-01-2.png)
+<img src="./images/vmbr-01-2.png" width=50%>
 
 3. Ajout d'une carte réseau, la vmbr4
 
-![OPNs-creaVM](./images/vmbr-01-3.png)
+<img src="./images/vmbr-01-3.png" width=50%>
 
 #### Installation
 
-![OPNs-INstallation](./images/install-00-0.png)
+<img src="./images/install-00-0.png" width=50%>
 
-![OPNs-INstallation](./images/install-00-1.png)
+<img src="./images/install-00-1.png" width=50%>
 
 Pour la première connexion et l'installation
 
@@ -37,34 +37,34 @@ Pour la première connexion et l'installation
 > [!WARNING]
 > le clavier est en QWERTY pour le moment
 
-![OPNs-INstallation](./images/install-00-2.png)
+<img src="./images/install-00-2.png" width=50%>
 
 Choix du type d'action à effectuer. 
 Sélection de l'installation en utilisant UFS
 
-![OPNs-INstallation](./images/install-00-3.png)
+<img src="./images/install-00-3.png" width=50%>
 
-![OPNs-INstallation](./images/install-00-4.png)
+<img src="./images/install-00-4.png" width=50%>
 
 Sélection et préparation du disque.
 
-![OPNs-INstallation](./images/install-00-5.png)
+<img src="./images/install-00-5.png" width=50%>
 
-![OPNs-INstallation](./images/install-00-6.png)
+<img src="./images/install-00-6.png" width=50%>
 
-![OPNs-INstallation](./images/install-00-7.png)
+<img src="./images/install-00-7.png" width=50%>
 
-![OPNs-INstallation](./images/install-00-8.png)
+<img src="./images/install-00-8.png" width=50%>
 
 Définition du mot de passe root
 
-![OPNs-INstallation](./images/install-00-9.png)
+<img src="./images/install-00-9.png" width=50%>
 
-![OPNs-INstallation](./images/install-00-10.png)
+<img src="./images/install-00-10.png" width=50%>
 
 Reboot pour finaliser l'installation.
 
-![OPNs-INstallation](./images/install-00-11.png)
+<img src="./images/install-00-11.png" width=50%>
 
 #### Configuration du réseau
 
@@ -72,42 +72,45 @@ OPNsense est maintenant installé mais pas encore connecté.
 
 1. Assignation des interfaces réseau
 
-![OPNs-INstallation](./images/install-01-1.png)
+<img src="./images/install-01-1.png" width=50%>
 
 On récupère les adresses MAC pour assigner les cartes sur le LAN et le WAN
 
-![OPNs-INstallation](./images/install-01-2.2.png)
+<img src="./images/install-01-2.2.png" width=50%>
 
-![OPNs-INstallation](./images/install-01-2.png)
+<img src="./images/install-01-2.png" width=50%>
 
 	vmbr1 -> WAN -> em0
-	
 	vmbr4 -> LAN -> em1
 
-![OPNs-INstallation](./images/install-01-3.png)
+<img src="./images/install-01-3.png" width=50%>
 
 2. Configuration des interfaces
 
-![OPNs-INstallation](./images/install-02-1.png)
+<img src="./images/install-02-1.png" width=50%>
 	* WAN
 		- Static
 		- 192.168.42.111/24
 		- passerelle : 192.168.42.1 (vmbr1)
-		![OPNs-INstallation](./images/install-02-2.png)
+		
+<img src="./images/install-02-2.png" width=50%>
+
 	* LAN
 		- static
 		- 10.0.0.1/16
 		- pas de passerelle
 		- activation du DHCP
 		- plage de DHCP : 10.0.0.100 - 10.0.0.150
-		![OPNs-INstallation](./images/install-02-3.png)
-		![OPNs-INstallation](./images/install-02-4.png)
 
-![OPNs-INstallation](./images/install-03-1.png)
+<img src="./images/install-02-3.png" width=50%>
+
+<img src="./images/install-02-4.png" width=50%>
+
+<img src="./images/install-03-1.png" width=50%>
 
 OPNsense est maintenant installer, on peut s'y connecter via le navigateur d'une machine sur le réseau.
 
-![OPNsense-webUI](./images/OPNsense-webUI.png)
+<img src="./images/OPNsense-webUI.png" width=50%>
 
 
 
