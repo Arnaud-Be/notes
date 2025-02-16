@@ -1,7 +1,7 @@
 #### OPNsense OpenVPN
 
-1. Création des Cetificats.
-	* Création d'une autoritéé : `System > Trust > Authorities`
+1. Création des Certificats.
+	* Création d'une autorité : `System > Trust > Authorities`
 		- Methode : internal Certificate Authority
 		- Description : **CA-OPNsense**
 		- issuer : Self-signed
@@ -32,7 +32,7 @@
 > - LAN : 10.0.0.0 / 16
 > - Tunnel VPN : 10.42.42.0/24
 
-	* Création d'une clé static : `VPN > OpenVPN > instances / onglet Static Keys`
+	* Création d'une clé statique : `VPN > OpenVPN > instances / onglet Static Keys`
 		- Description : **arnaud_auth**
 		- Mode : auth
 		- click sur la roue dentelé pour créer la clé
@@ -89,8 +89,8 @@
 		- Port : 11194
 		Exporter arnaud-CA (le certificat client)
 
-5. Création rèles NAT sur le proxmox 
-	au niveau du nœu (nsXXXXXX) `>_Shell`
+5. Création de la règle NAT sur le proxmox 
+	au niveau du nœud (nsXXXXXX) `>_Shell`
 	```
 	iptables -t nat -A PREROUTING -p udp --dport 11194 -j DNAT --to-destination <IP de l'OPNsense>:11194
 	```

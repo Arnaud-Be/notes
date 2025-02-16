@@ -7,7 +7,7 @@
 
 #### Création de la vm proxmox
 
-1. Création d'une nouveau Bridge réseau vmbr4 qui sera utiliser pour conecter la machine OPNsense au réseau LAN
+1. Création d'une nouveau Bridge réseau vmbr4 qui sera utiliser pour connecter la machine OPNsense au réseau LAN
 
 [!OPNs-creaVM](./images/vmbr-01-1.png)
 
@@ -40,13 +40,13 @@ Pour la première connexion et l'installation
 [!OPNs-INstallation](./images/install-00-2.png)
 
 Choix du type d'action à effectuer. 
-Selection de l'insr=tallation en utilisant UFS
+Sélection de l'installation en utilisant UFS
 
 [!OPNs-INstallation](./images/install-00-3.png)
 
 [!OPNs-INstallation](./images/install-00-4.png)
 
-Selection et préparation du disque.
+Sélection et préparation du disque.
 
 [!OPNs-INstallation](./images/install-00-5.png)
 
