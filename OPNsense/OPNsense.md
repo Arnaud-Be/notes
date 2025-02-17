@@ -31,11 +31,11 @@
 
 Pour la première connexion et l'installation
 
-  * Login : installer
-  * mot de passe : opnsense
+  * Login : **installer**
+  * mot de passe : **opnsense**
 
 > [!WARNING]
-> le clavier est en QWERTY pour le moment
+> le clavier est en **QWERTY** pour le moment
 
 <img src="./images/install-00-2.png" width=50%>
 
@@ -97,7 +97,7 @@ On récupère les adresses MAC pour assigner les cartes sur le LAN et le WAN
 <img src="./images/install-02-2.png" width=50%>
 
   * LAN
-	- static
+	- Static
 	- 10.0.0.1/16
 	- pas de passerelle
 	- activation du DHCP
