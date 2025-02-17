@@ -7,7 +7,7 @@
 		- issuer : Self-signed
 		- Common Name : **CA-OPNsense**
 		
-		Save
+	**Save**
 		
 	* Création d'un certificat : `System > Trust > Certificates`
 		- Methode : Create an internal Certificate
@@ -15,7 +15,8 @@
 		- Type : Server Certificate
 		- issuer : **CA-OPNsense**
 		- Common Name : **Server-Cert**
-		Save
+		
+	**Save**
 		
 	* Création d'un utilisateur : `System > Acces > Users`
 	
@@ -25,7 +26,8 @@
 		- Type : Client Certificate
 		- issuer : **CA-OPNsense**
 		- Common Name : **arnaud-CA**
-		Save
+		
+	**Save**
 		
 2. Création du serveur de réseau virtuel
 
@@ -37,8 +39,9 @@
 		- Description : **arnaud_auth**
 		- Mode : auth
 		- click sur la roue dentelé pour créer la clé
-		Save
-
+		
+	**Save**
+		
 	* Création d'un nouveau serveur : `VPN > OpenVPN > instances / onglet instances`
 		- Role : Server
 		- Description : **OPNsense-VPNserver**
@@ -49,8 +52,9 @@
 		- Certificate : **Server-Cert**
 		- TLS static key : [auth ..] arnaud_auth
 		- Local Network : 10.0.0.0/16
-		Save
-
+		
+	**Save**
+		
 > [!WARNING]
 > Ne pas oublier de cliquer sur **Apply**
 
@@ -68,8 +72,9 @@
 		- Destination port range 
 			Other
 			11194 / 11194
-		Save
-	
+		
+	**Save**
+		
 	* Autorise le client à se connecter au sous réseau : 
 		- Action : Pass
 		- Interface : OpenVPN
@@ -79,9 +84,9 @@
 		- Destination : any
 		- Destination port range 
 			any / any
-			
-		Save
-
+		
+	**Save**
+		
 	> [!WARNING]
 	> Appliquer les changement en cliquant sur **Apply changes**
 	
