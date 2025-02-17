@@ -6,6 +6,7 @@
 		- Description : **CA-OPNsense**
 		- issuer : Self-signed
 		- Common Name : **CA-OPNsense**
+		
 		Save
 		
 	* Création d'un certificat : `System > Trust > Certificates`
@@ -78,6 +79,7 @@
 		- Destination : any
 		- Destination port range 
 			any / any
+			
 		Save
 
 	> [!WARNING]
