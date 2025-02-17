@@ -42,29 +42,29 @@ Pour la première connexion et l'installation
 Choix du type d'action à effectuer. 
 Sélection de l'installation en utilisant UFS
 
-<img src="./images/install-00-3.png" width=50%>
+<img src="./images/install-00-3.png">
 
-<img src="./images/install-00-4.png" width=50%>
+<img src="./images/install-00-4.png">
 
 Sélection et préparation du disque.
 
-<img src="./images/install-00-5.png" width=50%>
+<img src="./images/install-00-5.png" >
 
-<img src="./images/install-00-6.png" width=50%>
+<img src="./images/install-00-6.png" >
 
-<img src="./images/install-00-7.png" width=50%>
+<img src="./images/install-00-7.png" >
 
-<img src="./images/install-00-8.png" width=50%>
+<img src="./images/install-00-8.png" >
 
 Définition du mot de passe root
 
-<img src="./images/install-00-9.png" width=50%>
+<img src="./images/install-00-9.png" >
 
-<img src="./images/install-00-10.png" width=50%>
+<img src="./images/install-00-10.png" >
 
 Reboot pour finaliser l'installation.
 
-<img src="./images/install-00-11.png" width=50%>
+<img src="./images/install-00-11.png" >
 
 #### Configuration du réseau
 
@@ -88,19 +88,20 @@ On récupère les adresses MAC pour assigner les cartes sur le LAN et le WAN
 2. Configuration des interfaces
 
 <img src="./images/install-02-1.png" width=50%>
-	* WAN
-		- Static
-		- 192.168.42.111/24
-		- passerelle : 192.168.42.1 (vmbr1)
+
+	- WAN
+	  - Static
+	  - 192.168.42.111/24
+	  - passerelle : 192.168.42.1 (vmbr1)
 		
 <img src="./images/install-02-2.png" width=50%>
 
-	* LAN
-		- static
-		- 10.0.0.1/16
-		- pas de passerelle
-		- activation du DHCP
-		- plage de DHCP : 10.0.0.100 - 10.0.0.150
+	- LAN
+	  - static
+	  - 10.0.0.1/16
+	  - pas de passerelle
+	  - activation du DHCP
+	  - plage de DHCP : 10.0.0.100 - 10.0.0.150
 
 <img src="./images/install-02-3.png" width=50%>
 
