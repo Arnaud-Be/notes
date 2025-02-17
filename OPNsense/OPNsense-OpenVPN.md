@@ -112,6 +112,6 @@
 
 **ENJOY**
 
-> [!NOTE]
+> [!CAUTION]
 > Beaucoup de déconnexions comme si la connexion au vpn ne tenait pas !!!
 
