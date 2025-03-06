@@ -112,6 +112,8 @@ sudo systemctl enable zabbix-server zabbix-agent apache2
 
 
 
-première connextion Zabbix
-[ Admin / zabbix ]
+> [!note]
+> première connextion Zabbix
+> http://AdressIp/zabbix/
+> [ Admin / zabbix ]
 
