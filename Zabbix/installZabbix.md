@@ -1,64 +1,6 @@
 ### Installation de zabbix sur CT debian12
 
-#### 1 Création du conteneur Debian
- 
-<img src="./images/00.png" width=50%>
-
-<img src="./images/01.png" width=50%>
-
-<img src="./images/02.png" width=50%>
-
-<img src="./images/03.png" width=50%>
-
-<img src="./images/04.png" width=50%>
-
-- Choix du réseau / DNS : 
-
-	- Choix de vmbr3 pour le bridge (réseau LAN2 de la pfsense) 
-	- Static : definir IP/cidr et passerelle (10.111.0.1 pour la pfsense) en DNS on met l'adresse de la pfsense
-	- en DHCP on laisse tout par defaut, on ne met rien dans le DNS
-	
-<img src="./images/05.png" width=50%>
-
-<img src="./images/06.png" width=50%>
-
-<img src="./images/07.png" width=50%>
-
-<img src="./images/08.png" width=50%>
-
-- Mise à jour du conteneur
-
-```
-apt update && apt upgrade
-```
-> [!WARNING]
-> L'utilisation du SSH avec le compte root est déconseillé
->
-> #### 2 Instalation de vim et activation de SSH pour root
-> ```
-> apt install vim
-> vim /etc/ssh/sshd.config
-> ```
-> 
-> > [!NOTE]
-> > Remplacer `#PermitRootLogin prohibit-password` par `PermitRootLogin yes`
-> 
-> ```
-> systemctl restart sshd
-> ```
-
-#### 2 Création d'un utilisateur et ajout au groupe sudo pour se connecter en SSH
-
-```
-apt install sudo vim
-mkdir /home/NomUtilisateur
-useradd -d /home/NomUtilisateur -G sudo -s /bin/bash NomUtilisateur
-```
-
-> [!TIP]
-> À partir d'ici il est plus simple de passer en SSH pour pouvoir copier/coller les commandes
-
-#### 3 Installation de Zabbix 
+#### 1 Installation de Zabbix 
 
 - [Zabbix](https://www.zabbix.com/fr/download)
 > [!NOTE]
@@ -75,7 +17,7 @@ sudo apt install zabbix-server-mysql zabbix-frontend-php zabbix-apache-conf zabb
 > [!WARNING]
 > Installer la base de donnée
 
-#### 4 Installation de Mariadb
+#### 2 Installation de Mariadb
 
 ```
 sudo apt install mariadb-server
@@ -116,7 +58,7 @@ quit;
 systemctl status mariadb.service
 ```
 
-#### 5 Installation adminer
+#### 3 Installation adminer
 
 ```
 sudo apt install adminer
@@ -124,7 +66,7 @@ sudo a2enconf adminer
 sudo systemctl reload apache2
 ```
 
-#### 6 Configuration Zabbix
+#### 4 Configuration Zabbix
 
 - Configuration des locales
 
