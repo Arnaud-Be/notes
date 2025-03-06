@@ -11,7 +11,7 @@ Sur un Serveur Windows installé :
     - Mettre en place des restriction d'horaires de travail
   
 3. Exploiter des serveurs Linux
-    - Installer une stack LAMP + glpi
+    - Installer une stack LAMP + glpi ou installer ZABBIX et déployer des agents
   
 4. Exploiter un réseau IP
 
@@ -28,7 +28,7 @@ Sur un Serveur Windows installé :
     - Ajouter des partage sur un serveur de fichier samba
  
 2. Automatiser des tâches à l’aide de scripts
-    - Script d'installation docker + portainer + swarm + oSekour vable pour debian et ubuntu serveur (à voir avec Patrice)
+    - Script d'installation docker + portainer + swarm + oSekour valable pour debian et ubuntu serveur (à voir avec Patrice)
   
 3. Maintenir et sécuriser les accès à Internet et les interconnexions des réseaux
  - Sur pfsense
