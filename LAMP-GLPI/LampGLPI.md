@@ -202,7 +202,8 @@ sudo vim /var/www/html/glpi/.htaccess
    RewriteCond %{REQUEST_URI} !^/public
    RewriteRule ^(.*)$ public/index.php [QSA,L]
 
-sudo a2ensite 000-default.conf
+sudo a2ensite 000-glpi.conf
+sudo a2dissite 000-default.conf
 sudo a2enmod rewrite
 ```
 - cookie_httponly
