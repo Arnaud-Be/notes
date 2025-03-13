@@ -123,7 +123,7 @@ echo "<?php phpinfo(); ?>" | sudo tee -a /var/www/html/info.php
 ```
 cd ~
 wget https://github.com/glpi-project/glpi/releases/download/10.0.18/glpi-10.0.18.tgz
-sudo tar -xvf glpi-10.0.17.tgz -C /var/www/html
+sudo tar -xvf glpi-10.0.18.tgz -C /var/www/html
 ```
 ```
 sudo chown -R $USER:www-data /var/www/html
